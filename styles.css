@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "coves-light";
+  src: url("public/fonts/covesLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "coves-bold";
+  src: url("public/fonts/covesBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "coves-light", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background-color: #1d7b8a;
+  color: #fdf3d3;
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem 4rem;
+}
+
+.hero-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #fdf3d3;
+  flex-shrink: 0;
+}
+
+.hero-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  margin: 0;
+  align-self: center;
+}
+
+.hero-name {
+  font-family: "coves-bold", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 6.5rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.2rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.hero-link {
+  position: relative;
+  text-decoration: none;
+  color: #fdf3d3;
+}
+
+.hero-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 1px;
+  background-color: #fdf3d3;
+  transition: width 0.2s ease;
+}
+
+.hero-link:hover::after,
+.hero-link:focus-visible::after {
+  width: 100%;
+}
+
+.hero-link:focus-visible {
+  outline: 2px solid #fdf3d3;
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+    margin: 0 0 0.2rem;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
+}
