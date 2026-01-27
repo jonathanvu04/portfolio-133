@@ -9,13 +9,10 @@ EMAIL: jonattv3@uci.edu
     <meta name="author" content="Jonathan Vu" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Jonathan Vu</title>
+    <title>Jonathan's Portfolio</title>
   </head>
   <body>
-    <div>
-      <a href="http://validator.w3.org/check?uri=referer"> W3C validator </a>
-    </div>
-    <main class="hero">
+    <main class="hero" id="hero">
       <section class="hero-inner">
         <div class="hero-photo">
           <img
@@ -26,21 +23,69 @@ EMAIL: jonattv3@uci.edu
         </div>
         <div class="hero-text">
           <h1 class="hero-name">Jonathan Vu</h1>
-          <h3 class="hero-description">software engineer, lifetime learner</h3>
+          <h2 class="hero-description">software engineer, lifetime learner</h2>
         </div>
       </section>
     </main>
+    <section class="about-me" id="about-me">
+      <h2 class="about-me-title">About Me</h2>
+      <p class="about-me-text">
+        Hi! Welcome to my page. I'm Jonathan, a student at UC Irvine studying
+        Computer Science and Statistics. I enjoy building things that live at
+        the intersection of technology and people, whether that is through
+        software, data, or design. Alongside school, I do freelance web
+        development, working with a variety of clients to create thoughtful,
+        functional websites. At the core, I value wisdom, growth, and community.
+        I’m always looking to learn, to improve how I think and build, and to
+        contribute to spaces that help others do the same.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="contact-title">Contact Me</h2>
+      <p class="contact-text">
+        Feel free to reach out if you’d like to chat about anything and
+        everything!
+      </p>
+      <div class="contact-links">
+        <a
+          class="contact-link"
+          href="https://github.com/jonathanvu04"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          class="contact-link"
+          href="https://www.linkedin.com/in/jonathan-vu-a894a124b/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+        <a class="contact-link" href="mailto:jtvu04@gmail.com">Email</a>
+        <a
+          class="contact-link"
+          href="https://www.instagram.com/jonasawr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+      </div>
+    </section>
 
     <nav class="bottom-nav" aria-label="Primary navigation">
       <div class="bottom-nav-inner">
-        <button class="bottom-nav-item" type="button">
+        <a class="bottom-nav-item bottom-nav-link" href="#hero">
           <img
             src="public/icons/home-icon.png"
             alt="Home"
             class="bottom-nav-icon"
           />
           <span class="bottom-nav-label">Home</span>
-        </button>
+        </a>
         <a
           class="bottom-nav-item bottom-nav-link"
           href="public/Resume_JonathanVu.pdf"
@@ -54,22 +99,22 @@ EMAIL: jonattv3@uci.edu
           />
           <span class="bottom-nav-label">Resume</span>
         </a>
-        <button class="bottom-nav-item" type="button">
+        <a class="bottom-nav-item bottom-nav-link" href="#contact">
           <img
             src="public/icons/contact-icon.png"
             alt="Contacts"
             class="bottom-nav-icon"
           />
           <span class="bottom-nav-label">Contacts</span>
-        </button>
-        <button class="bottom-nav-item" type="button">
+        </a>
+        <a class="bottom-nav-item bottom-nav-link" href="#about-me">
           <img
             src="public/icons/person-icon.png"
             alt="About Me"
             class="bottom-nav-icon"
           />
           <span class="bottom-nav-label">About Me</span>
-        </button>
+        </a>
       </div>
     </nav>
   </body>

@@ -24,16 +24,11 @@ body {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family:
-    "coves-light",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: "coves-light", sans-serif;
   background-color: #1d7b8a;
   color: #fdf3d3;
 }
@@ -83,13 +78,7 @@ body {
 }
 
 .hero-name {
-  font-family:
-    "coves-bold",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: "coves-bold", sans-serif;
   font-size: 6.5rem;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -193,7 +182,86 @@ body {
   letter-spacing: 0.02em;
 }
 
-@media (max-width: 800px) {
+.about-me {
+  min-height: 100vh;
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 7rem;
+  text-align: center;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-me-title {
+  font-family: "coves-bold", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  margin: 0 0 1.25rem;
+}
+
+.about-me-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.contact {
+  min-height: 100vh;
+  margin: 0;
+  padding: 4rem 2rem 7rem;
+  background-color: #fdf3d3;
+  color: #123b42;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: "coves-bold", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.06em;
+  margin: 0 0 1.25rem;
+}
+
+.contact-text {
+  max-width: 40rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  margin: 0 0 2rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  justify-content: center;
+}
+
+.contact-link {
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: #123b42;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.1rem;
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  color: #1d7b8a;
+  border-color: #1d7b8a;
+  outline: none;
+}
+
+@media (max-width: 1000px) {
   .hero-inner {
     flex-direction: column;
     text-align: center;
@@ -208,6 +276,24 @@ body {
 
   .hero-links {
     justify-content: center;
+  }
+
+  .about-me {
+    max-width: 100%;
+    padding: 3rem 1.5rem 6rem;
+    margin: 0 auto;
+  }
+
+  .about-me-text {
+    font-size: 1.05rem;
+  }
+
+  .contact {
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
   }
 }
 
@@ -234,5 +320,18 @@ body {
     letter-spacing: 0.01em;
     margin: 0;
     align-self: center;
+  }
+
+  .about-me {
+    padding: 2.75rem 1.25rem 5.5rem;
+    margin: 0 auto;
+  }
+
+  .about-me-text {
+    font-size: 1rem;
+  }
+
+  .contact {
+    padding: 2.75rem 1.25rem 5.5rem;
   }
 }
